@@ -35,22 +35,20 @@ public class Main {
         		mli.add(new Node(value));
         		break;
         	case 2:
-        		System.out.println(mli.next());
+        		mli.traverse();
         		break;
-        	case 3:
-        		System.out.println(mli.previous());
-        		break;
-        	case 4:
-        		System.out.println(mli.remove() + "removed");
+         	case 3:
+         		System.out.println("What do you want to remove?");
+         		value = sc.nextLine();
+        		System.out.println(mli.remove(new Node(value)) + "removed");
         		break;
         	case 0:
         		running = false;
         		break;
         	default:
         		System.out.println("1) Add item\n"
-            			+ "2) Next Item \n"
-            			+ "3) Previous Item\n"
-            			+ "4) Remove Current Item \n"
+            			+ "2) List Items \n"
+            			+ "3) Remove Item \n"
             			+ "0) Quit");
         	}
         }
